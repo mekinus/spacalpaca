@@ -7,6 +7,8 @@ public class MenuManager : MonoBehaviour
 {
 
     private bool manualIsOpen = false;
+
+    public GameObject manual;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +36,19 @@ public class MenuManager : MonoBehaviour
 
     {
         if (!manualIsOpen)
+        {
             manualIsOpen = true;
+            manual.SetActive(true);
+        }
+        
         else
+        {
             manualIsOpen = false;
+            manual.SetActive(false);
+        }
+        
     }
+
+
+   
 }

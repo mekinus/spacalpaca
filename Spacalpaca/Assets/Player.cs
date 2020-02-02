@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     }
 
     public PlayerState playerState;
+    public Manager theManager;
+    public Power power;
     public Image hpBar;
     public Image spBar;
 
@@ -49,30 +51,35 @@ public class Player : MonoBehaviour
     void MovementHandler()
 
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-
-        transform.position += new Vector3(h * moveSpeed * Time.deltaTime, v * moveSpeed * Time.deltaTime);
-
-        if (transform.position.x < leftBound.position.x)
-            transform.position = new Vector3(leftBound.position.x, transform.position.y, 0f);
-        else if (transform.position.x > rightBound.position.x)
-            transform.position = new Vector3(rightBound.position.x, transform.position.y, 0f);
-        else if (transform.position.y > upBound.position.y)
-            transform.position = new Vector3(transform.position.x,upBound.position.y, transform.position.z);
-        else if (transform.position.y < lowBound.position.y)
-            transform.position = new Vector3(transform.position.x, lowBound.position.y, transform.position.z);
-
-        if(Input.GetMouseButtonDown(0))
+        if(theManager.states == Manager.GameStates.resumed)
         {
-            if(playerState == PlayerState.powering)
-            UsePower();
+            float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");
+
+            transform.position += new Vector3(h * moveSpeed * Time.deltaTime, v * moveSpeed * Time.deltaTime);
+
+            if (transform.position.x < leftBound.position.x)
+                transform.position = new Vector3(leftBound.position.x, transform.position.y, 0f);
+            else if (transform.position.x > rightBound.position.x)
+                transform.position = new Vector3(rightBound.position.x, transform.position.y, 0f);
+            else if (transform.position.y > upBound.position.y)
+                transform.position = new Vector3(transform.position.x, upBound.position.y, transform.position.z);
+            else if (transform.position.y < lowBound.position.y)
+                transform.position = new Vector3(transform.position.x, lowBound.position.y, transform.position.z);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (playerState == PlayerState.powering)
+                    UsePower();
+            }
         }
+    
     }
 
     public void TakeDamage()
     {
         hp--;
+        theManager.CheckIfGameIsOver();
     }
 
     public void UsePower()
@@ -80,7 +87,7 @@ public class Player : MonoBehaviour
         if(sp > 0)
         {
             TakeSP();
-            Debug.Log("THE POWER IS HERE !");
+            power.SetPowerBeingUsed(true);
         }
       
     }

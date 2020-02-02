@@ -17,6 +17,10 @@ public class Power : MonoBehaviour
     private SpriteMask mask;
     private SpriteRenderer rend;
 
+    [SerializeField] private bool playerUsedPower = false;
+    private bool coolDownIsActive = false;
+    private float coolDown = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,16 @@ public class Power : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PowerBeingUsedHandler();
+
+        if (coolDownIsActive)
+            coolDown -= Time.deltaTime;
+        if (coolDown < 0)
+        {
+            playerUsedPower = false;
+            coolDown = 2f;
+        }
+        
 
         if(isActive)
 
@@ -88,8 +102,45 @@ public class Power : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void SetPowerBeingUsed(bool used)
     {
+        if (used)
+            playerUsedPower = true;
+            
         
     }
+
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if(collision.gameObject.tag == "Alien")
+        {
+
+            if (playerUsedPower)
+                if(collision.gameObject.GetComponent<Alien>() != null)
+                {
+                    collision.gameObject.GetComponent<Alien>().TakeDamage();
+                }
+
+        }
+
+    }
+
+    void PowerBeingUsedHandler()
+    {
+
+      if(playerUsedPower)
+        {
+
+            coolDownIsActive = true;
+            
+
+        }
+
+
+    }
+
 }
