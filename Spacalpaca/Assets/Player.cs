@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    public enum PlayerState
+    {
+        powering,idle
+    }
+
+    public PlayerState playerState;
     public Image hpBar;
     public Image spBar;
 
@@ -59,19 +65,44 @@ public class Player : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
+            if(playerState == PlayerState.powering)
             UsePower();
         }
     }
 
-    void TakeDamage()
+    public void TakeDamage()
     {
         hp--;
     }
 
-    void UsePower()
+    public void UsePower()
     {
-        
+        if(sp > 0)
+        {
+            TakeSP();
+            Debug.Log("THE POWER IS HERE !");
+        }
+      
     }
+
+    public void RecoverHP()
+    {
+        if (hp < 3)
+            hp++;
+    }
+
+    public void TakeSP()
+    {
+        sp--;
+    }
+
+    public void RecoverSP()
+    {
+        if (sp < 4)
+            sp++;
+    }
+
+
 
      void CheckHP()
     {
@@ -96,5 +127,10 @@ public class Player : MonoBehaviour
             case 0: spBar.overrideSprite = powerBar[0]; break;
             default: spBar.overrideSprite = powerBar[0]; break;
         }
+    }
+
+    public void SetPlayerState(PlayerState pState)
+    {
+        playerState = pState;
     }
 }

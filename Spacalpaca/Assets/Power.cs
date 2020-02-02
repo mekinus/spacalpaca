@@ -5,6 +5,10 @@ using UnityEngine;
 public class Power : MonoBehaviour
 {
 
+   
+
+    public Player thePlayer;
+
     public int sp;
     public float mouseSensitivityX = 1;
     public float mouseSensitivityY = 1;
@@ -45,8 +49,10 @@ public class Power : MonoBehaviour
 
     public void SetActiveStatus(bool active)
     {
+        if(thePlayer.sp > 0)
         if(active)
         {
+                thePlayer.SetPlayerState(Player.PlayerState.powering);
             isActive = true;
             mask.enabled = true;
             rend.enabled = true;
@@ -54,6 +60,7 @@ public class Power : MonoBehaviour
 
         else 
         {
+                thePlayer.SetPlayerState(Player.PlayerState.idle);
             isActive = false;
             mask.enabled = false;
             rend.enabled = false;
@@ -83,6 +90,6 @@ public class Power : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        
     }
 }

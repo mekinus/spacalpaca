@@ -63,8 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Intro.cs" />
     <Compile Include="Assets\MenuManager.cs" />
+    <Compile Include="Assets\Meteor.cs" />
     <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Potion.cs" />
     <Compile Include="Assets\Power.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Leonardo/Desktop/Game Projects/ggj2020/Spacalpaca/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
