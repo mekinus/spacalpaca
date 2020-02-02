@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 31115
+  controlID: 55
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,18 +86,18 @@ MonoBehaviour:
       y: 17
       width: 739
       height: 336
-    m_Scale: {x: 0.3111111, y: 0.31111112}
-    m_Translation: {x: 369.49997, y: 168}
+    m_Scale: {x: 0.33005777, y: 0.33005777}
+    m_Translation: {x: 369.5, y: 175.0137}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1187.6786
-      y: -540
-      width: 2375.3572
-      height: 1080
+      x: -1119.501
+      y: -530.2517
+      width: 2239.002
+      height: 1018.0036
     m_MinimalGUI: 1
   m_defaultScale: 0.31111112
   m_TargetTexture: {fileID: 0}
@@ -128,10 +128,10 @@ MonoBehaviour:
     y: 0
     width: 739
     height: 767
-  m_MinSize: {x: 202, y: 322}
-  m_MaxSize: {x: 4002, y: 8022}
+  m_MinSize: {x: 202, y: 344}
+  m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 31116
+  controlID: 56
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 32338
+  m_LastSelectedObjectID: 32310
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 31095
+  controlID: 77
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -561,8 +561,8 @@ MonoBehaviour:
     y: 0
     width: 365
     height: 489
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -597,9 +597,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 367e0000
-      m_LastClickedID: 32310
-      m_ExpandedIDs: 4038ffff7642ffffd042ffff3068ffffa469ffffbca3ffff6cafffff50b5ffff14b6ffff70fbffff82330000e66c00004a7600000c7e00001e7e0000
+      m_SelectedIDs: e4330000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 88f6ffff60f7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -688,20 +688,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Sci-Fi Music Pack 1/Loops
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Sci-Fi Music Pack 1/Loops
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Leonardo\Desktop\Game Projects\ggj2020\Spacalpaca
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 1}
-    m_SelectedIDs: 6c2d0000
-    m_LastClickedID: 11628
-    m_ExpandedIDs: 000000006c2d00008e2d000000ca9a3b
+    m_SelectedIDs: e4330000
+    m_LastClickedID: 13284
+    m_ExpandedIDs: 00000000282f00004a2f0000ba32000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -729,7 +729,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c2d00008e2d000000ca9a3b
+    m_ExpandedIDs: 00000000282f00004a2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -754,24 +754,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 367e0000
-    m_LastClickedInstanceID: 32310
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: e4330000
+    m_LastClickedInstanceID: 13284
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: b0180900f2ce000000000000728b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Themes
+      m_OriginalName: Themes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13026
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 14}
     m_CreateAssetUtility:

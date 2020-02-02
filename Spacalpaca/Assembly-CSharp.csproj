@@ -63,17 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Alien.cs" />
-    <Compile Include="Assets\ClearManager.cs" />
-    <Compile Include="Assets\Effect.cs" />
-    <Compile Include="Assets\Intro.cs" />
-    <Compile Include="Assets\Manager.cs" />
-    <Compile Include="Assets\MenuManager.cs" />
-    <Compile Include="Assets\Meteor.cs" />
-    <Compile Include="Assets\Player.cs" />
-    <Compile Include="Assets\Potion.cs" />
-    <Compile Include="Assets\Power.cs" />
-    <Compile Include="Assets\Shard.cs" />
+    <Compile Include="Assets\Scripts\Alien.cs" />
+    <Compile Include="Assets\Scripts\ClearManager.cs" />
+    <Compile Include="Assets\Scripts\Effect.cs" />
+    <Compile Include="Assets\Scripts\Intro.cs" />
+    <Compile Include="Assets\Scripts\Manager.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
+    <Compile Include="Assets\Scripts\Meteor.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Potion.cs" />
+    <Compile Include="Assets\Scripts\Power.cs" />
+    <Compile Include="Assets\Scripts\Shard.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Leonardo/Desktop/Game Projects/ggj2020/Spacalpaca/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
